@@ -1,37 +1,14 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
-import Header from "../components/header";
-
-const navigation = [
-  { name: "Projects", href: "/projects" },
-  { name: "Contacts", href: "/contact" },
-  { name: "About Us", href: "/aboutus" },
-];
+import Header from "../src/components/header";
 
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Include the Header Component Here */}
       <Header />
-
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <nav className="my-16 animate-fade-in">
-          <ul className="flex gap-4 sm:items-end">
-            {navigation.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-sm duration-500 text-zinc-500 hover:text-zinc-300"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </ul>
-        </nav>
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
           <Image
-            className="dark:invert"
             src="https://nextjs.org/icons/next.svg"
             alt="Next.js logo"
             width={180}
@@ -46,7 +23,7 @@ export default function Home() {
               </code>
               .
             </li>
-            <li>Save and see your changes instantly.</li>
+            <li>MONOKROM</li>
           </ol>
 
           <div className="flex gap-4 items-center flex-col sm:flex-row">
@@ -79,7 +56,6 @@ export default function Home() {
           <a
             className="flex items-center gap-2 hover:underline hover:underline-offset-4"
             href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
             rel="noopener noreferrer"
           >
             <Image

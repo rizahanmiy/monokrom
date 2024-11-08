@@ -1,25 +1,23 @@
-// components/Header.tsx
-
+"use client";
 import Link from "next/link";
 import Image from "next/image"; // Import the Image component
-import { Navigation } from "../constant/navigation/navigation";
+import { Navigation } from "../domain/services/navigation";
+import Logo from "/public/images/monokrom.png";
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-gray-900 text-white py-4">
-      <div className="container mx-auto flex justify-between items-center px-4">
+    <header className="text-black py-10">
+      <div className="container mx-auto flex justify-between items-center px-4 sm:flex-row flex-col gap-6">
         {/* Make the logo clickable */}
         <Link href="/" className="flex items-center">
           <Image
-            className="dark:invert"
-            src="../assets/monokrom_logo.svg"
+            className="light:invert"
+            src={Logo}
             alt="MONOKROM logo"
             width={256}
-            height={6}
-            priority
+            height={61}
           />
         </Link>
-
         <nav>
           <ul className="flex space-x-6">
             {Navigation.items.map((item) => (
@@ -28,7 +26,7 @@ const Header: React.FC = () => {
                 {/* Wrap link in a list item */}
                 <Link
                   href={item.href}
-                  className="text-sm text-zinc-500 hover:text-zinc-300 transition duration-300"
+                  className={` size-20 text-neutral-700 hover:text-neutral-900 transition duration-300`}
                 >
                   {item.name}
                 </Link>
