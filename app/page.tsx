@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Header from "../src/components/header";
+import Header from "@/components/header";
 import Logo from "/public/images/monokrom.png";
-import Profile from "../src/components/profile_card";
+import Profile from "@/components/profile_card";
 
 export default function Home() {
   return (
