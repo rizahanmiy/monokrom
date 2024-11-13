@@ -1,11 +1,5 @@
 import type { Metadata } from "next";
 import "/src/styles/globals.css";
-import { Jost } from "next/font/google";
-
-const jost = Jost({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,9 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${jost.className} ${jost.className} antialiased`}>
-        {children}
-      </body>
+      <body className="font-jost">{children}</body>
     </html>
   );
 }

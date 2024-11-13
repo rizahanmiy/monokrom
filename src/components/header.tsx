@@ -2,12 +2,16 @@
 import Link from "next/link";
 import Image from "next/image"; // Import the Image component
 import { Navigation } from "../domain/services/navigation";
-import Logo from "/public/images/monokrom.png";
+import Logo from "/public/images/monokrom.svg";
 
 const Header: React.FC = () => {
   return (
     <header className="text-black py-10">
-      <div className="container mx-auto flex justify-between items-center px-4 sm:flex-row flex-col gap-6">
+      <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+      <div className="container mx-auto flex justify-between items-center px-4 sm:flex-row flex-col gap-6 font-jost">
         {/* Make the logo clickable */}
         <Link href="/" className="flex items-center">
           <Image
