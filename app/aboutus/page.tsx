@@ -3,13 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "../../src/components/header";
 import ServiceCard from "@/components/services_card";
+import Logo from "/public/images/monokrom.svg";
 
 export default function AboutUs() {
   return (
     <div className="min-h-screen flex flex-col font-jost">
       <Header />
-      <div className="flex items-center flex-col gap-6 justify-center sm:flex-row min-h-96">
-        <div className="col-span-2 justify-center text-left m-5">
+      <div className="flex items-center flex-col gap-6 justify-center sm:flex-row min-h-96 m-10">
+        <div className="justify-center text-left m-5">
           <h1 className="font-bold text-4xl mb-4 font-jost">About Us</h1>
           <p className="font-normal text-sm">
             We are a digital marketing specialist dedicated to providing
